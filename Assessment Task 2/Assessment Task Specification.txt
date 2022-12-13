@@ -1,0 +1,56 @@
+Task Description
+Data Engineers regularly collect, process and store data. In this task you will develop a deeper understanding of how C programming language can be used for collecting, processing and storing data. In this assignment you get the opportunity to build an interactive program that can manage a list of employees in a company.
+
+The list is stored as an array of employee_t type structures
+
+employee_t employeelist [MAX_COMPANY_SIZE];
+
+The employee_t is a structure typedef for struct employee. The struct employee contains the following fields
+
+name - array of MAX_NAME_SIZE chars (string)
+fte - a float between 0.0 and 1.0
+level - unsigned integer between 7 and 18
+birthday - a structure of date_t type as defined below.
+The variable fte indicates if an employee works full-time or part-time for a company. The value fte=1.0 (or 0.5) indicates that an employee works full time (or half-time) for the company.  
+
+Note that we now have a struct nested within a struct. The birthday is a structure typedef for struct date. The struct date_t contains the following fields,
+
+day - unsigned integer between 1 and 31 (inclusive)
+month - unsigned integer between 1 and 12 (inclusive)
+year - unsigned integer between 1800 and 2017
+Your program interacts with the nested struct array in your memory (RAM) and simple database file in your hard disk. It should provide the following features:
+
+1. add employee
+Add a new employee to the employeelist through the terminal. You should collect the input by asking multiple questions from the user.
+
+Enter name>
+Enter birthday: day>
+Enter birthday: month>
+Enter birthday: year>
+Enter FTE>
+Enter level>
+
+2. delete last employee
+Remove the last employee from the employeelist. TIP: you cannot delete an element from an array. Instead consider using an integer to keep count of number of employees.
+
+3. display employee list
+Display the list of employees in the following format as shown in the sample run. Please follow the sample executable for the exact display format, including white spaces.
+
+Name       Birthday   FTE   Level
+---------- ---------- ----- -----
+bee        01-01-1900 1.000 07
+
+Pay attention to the strict formatting guide:
+
+Name - left aligned, 10 chars at most.
+Date - 2 digit day, 2 digit month, 4 digit year
+FTE – 3 decimal places for the fractional part
+level - 2 digits 
+4. save the employee list to the database file
+Save the employeelist in the hard disk as a binary/text file named database. You may use your own format to save the data. You should overwrite if database file already exists.
+
+5. read the employee list from the database file
+Read the database file and put the data into employeelist. You may only read the data files created by your own program. You should overwrite the employeelist array you had in memory when loading from the file.
+
+6. exit the program
+Exit the interactive program.
