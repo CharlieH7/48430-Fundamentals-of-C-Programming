@@ -6,6 +6,8 @@ Session: Spring 2022
 
 Subject: 48430 Fundamentals of C Programming
 
+Final Grade: 91 (High Distinction)
+
 Content(topics)
 1. Fundamental programming concepts – program development cycle, GNU toolchain for compiling C source code,
 2. linking binary object files, debugging, testing, and modular programming.
